@@ -1,0 +1,92 @@
+/* =========================
+   responsive.css
+   For mobile/tablet-specific responsive styles
+   ========================= */
+
+/* Small Devices (Phones) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .custom-header,
+  .custom-footer {
+    text-align: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .custom-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .responsive-hide-mobile {
+    display: none !important;
+  }
+
+  .avatar-large {
+    width: 70px;
+    height: 70px;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 0 25px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .avatar-large {
+    width: 60px;
+    height: 60px;
+  }
+
+  .title-xl {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+  .navbar-nav {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+  }
+}

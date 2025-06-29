@@ -1,0 +1,265 @@
+/* =============================
+   EMO PROJECT - GLOBAL STYLES
+   File: style.css
+   Description: Common base styles used across all pages
+============================= */
+
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #222;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #c59d5f; /* golden accent */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* === CONTAINER & LAYOUT === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* === HEADINGS === */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  color: #222;
+}
+
+h2.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  border-left: 5px solid #c59d5f;
+  padding-left: 10px;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-block;
+  background-color: #c59d5f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #a27c40;
+}
+
+/* === SPACING HELPERS === */
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-3 { margin-top: 30px; }
+.mb-1 { margin-bottom: 10px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-3 { margin-bottom: 30px; }
+
+.p-1 { padding: 10px; }
+.p-2 { padding: 20px; }
+.p-3 { padding: 30px; }
+
+/* === UI COMPONENTS === */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #c59d5f;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #c59d5f;
+  border-radius: 4px;
+}
+
+/* === BADGES & TAGS === */
+.badge {
+  background: #c59d5f;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+/* === FORMS === */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c59d5f;
+}
+
+/* === UTILITY === */
+.hidden { display: none !important; }
+.shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.shadow-md { box-shadow: 0 3px 6px rgba(0,0,0,0.15); }
+.shadow-lg { box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+/* === RESPONSIVE EXAMPLE === */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  h2.section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Add more reusable styles here as the project grows */
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   EMO HEADER STYLE - header.css
+   For styling the navbar/header
+=================================*/
+
+/* NAVBAR CONTAINER */
+.navbar {
+  background-color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c59d5f !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* NAV LINKS */
+.navbar-nav .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #c59d5f;
+  transform: translateY(-2px);
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.2rem;
+}
+
+/* ACTIVE LINK INDICATOR */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus {
+  color: #c59d5f !important;
+  font-weight: 600;
+}
+
+/* DROPDOWNS (if added later) */
+.dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  animation: dropdownFade 0.3s ease forwards;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* STICKY SHADOW ON SCROLL */
+.sticky-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
